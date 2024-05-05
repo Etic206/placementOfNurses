@@ -5,6 +5,7 @@ import { Departments } from '../Models/departments'
 @Injectable({
   providedIn: 'root'
 })
+
 export class DepartmentService {
 
   list: Departments[] = [
