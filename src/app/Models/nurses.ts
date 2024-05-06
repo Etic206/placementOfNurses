@@ -5,9 +5,9 @@ export class Nurses {
     Last_Name!: string;
     First_Name!: string;
     Several_Hours_Per_Week!: number;
-    DepartmentID!: number[]; 
+    // DepartmentID!: number[]; 
     Wage!: number;
     Seniority!: number;
-
+    Password!: string;
     constructor() { }
 }

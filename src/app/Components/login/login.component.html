@@ -1,0 +1,21 @@
+<input type="text" [(ngModel)]="idNumber" (keypress)="onKeyPress($event)" placeholder="Enter Nurse ID and press Enter">
+<div *ngIf="isNurseDataAvailable">
+  <div>
+    <p>ID: {{ nurseDetailsList.ID }}</p>
+    <p>Last Name: {{ nurseDetailsList.LastName }}</p>
+    <p>First Name: {{ nurseDetailsList.FirstName }}</p>
+    <p>Hours Per Week: {{ nurseDetailsList.HoursPerWeek }}</p>
+    <p>Departments:
+      <span *ngFor="let department of nurseDetailsList.Departments">
+        {{ department }}
+      </span>
+    </p>
+    <p>Wage: {{ nurseDetailsList.Wage }}</p>
+    <p>Seniority: {{ nurseDetailsList.Seniority }}</p>
+    <button>ערוך</button>
+  </div>
+</div>
+<div *ngIf="!isNurseDataAvailable && idNumber !== ''">
+  <p>Nurse with ID {{ idNumber }} not found.</p>
+  
+</div>

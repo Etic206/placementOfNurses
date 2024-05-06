@@ -1,0 +1,3 @@
+<button (click)="getNurseDetails()">Show Nurse Details</button>
+<div *ngFor="let nurse of nurseDetailsList">
+    <p> תעודת זהות: {{nurse.ID}},  שם פרטי: {{ nurse.First_Name }},    משפחה: {{ nurse.Last_Name }},
